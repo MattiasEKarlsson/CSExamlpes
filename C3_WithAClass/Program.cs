@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text.RegularExpressions;
 
 namespace C3_WithAClass
 {
@@ -17,12 +18,15 @@ namespace C3_WithAClass
             {
                 person.Age = Convert.ToInt32(Console.ReadLine());
             }
+
             catch
             {
+                
                 Console.WriteLine("Invalid input");
                 Console.WriteLine($"Okej {person.Name}, how old are you?: ");
                 person.Age = Convert.ToInt32(Console.ReadLine());
             }
+
             finally
             {
                 Console.WriteLine($"Okej {person.Name} {person.Age}");
@@ -30,7 +34,7 @@ namespace C3_WithAClass
 
             Console.WriteLine($"Your name contains {person.Name.Length} charachers.");
             Console.WriteLine($"{person.Name}, where do you live?");
-            var city = Console.ReadLine();
+            person.City = Console.ReadLine();
 
             Console.WriteLine($"My brother livies in {person.City}");
         }

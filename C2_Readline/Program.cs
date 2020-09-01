@@ -17,9 +17,12 @@ namespace C2_Readline
             }
             catch
             {
-                Console.WriteLine("Invalid input");
-                Console.WriteLine($"Okej {name}, how old are you?: ");
-                age = Convert.ToInt32(Console.ReadLine());
+                while (true)
+                {
+                    Console.WriteLine("Invalid input");
+                    Console.WriteLine($"Okej {name}, how old are you?: ");
+                    age = Convert.ToInt32(Console.ReadLine());
+                }
             }
             finally 
             {
