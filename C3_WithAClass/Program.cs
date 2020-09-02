@@ -12,6 +12,7 @@ namespace C3_WithAClass
             Console.Write("What is your name?: ");
             person.Name = Console.ReadLine();
 
+            rrerun:                                                         //Loop för try/catch
             Console.Write($"Okej {person.Name}, how old are you?: ");
             person.Age = 0;
             try
@@ -21,16 +22,11 @@ namespace C3_WithAClass
 
             catch
             {
-                
                 Console.WriteLine("Invalid input");
-                Console.WriteLine($"Okej {person.Name}, how old are you?: ");
-                person.Age = Convert.ToInt32(Console.ReadLine());
+                goto rrerun;                                          //Loop
             }
 
-            finally
-            {
-                Console.WriteLine($"Okej {person.Name} {person.Age}");
-            }
+           
 
             Console.WriteLine($"Your name contains {person.Name.Length} charachers.");
             Console.WriteLine($"{person.Name}, where do you live?");
