@@ -59,25 +59,21 @@ namespace C5_WithAgeClac
         }
 
         public void AskForDateOfBirth() 
-        {
-            Console.Write("When were u born?:");
+        { 
+            www:
+            Console.WriteLine("When were u born?:");
 
             try
             {
                 DateOfBirth = Convert.ToDateTime(Console.ReadLine());
             }
+            
             catch
             {
-                Console.Write("Enter like 2000-01-01");
-                try
-                {
-                    Console.Write("Again, enter like 2000-01-01");
-                }
-                catch 
-                {
-                    Console.Write("U are a retard!!");
-                }
+                Console.WriteLine("Enter like 2000-01-01");
+                goto www;
             }
+
             Console.WriteLine($"Häfting jag är oxå {CalculateAge()}!!");
         
         }
