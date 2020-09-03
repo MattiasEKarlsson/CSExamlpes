@@ -8,19 +8,19 @@ namespace C13_Interfaces_2.Helpers
 {
     class SampleData
     {
-        public static List<IShoppingItem> CartSampleIterms() 
+        public static List<IShoppingItem> CartSampleItems()
         {
             var output = new List<IShoppingItem>();
 
-            output.Add(new Product { Id = "232323", Name = "OldPhone", Description = "Iphone6" });
-            output.Add(new Product { Id = "122", Name = "NewPhone", Description = "Iphone11" });
-            output.Add(new Product { Id = "1", Name = "Phone", Description = "Iphone9" });
+            output.Add(new Product { Id = "1007573", Name = "Apple Airpods (2019)", Description = "AirPods med laddningsetui" });
+            output.Add(new Product { Id = "1013033", Name = "SodaStream Genesis Megapack Titan/silver", Description = "Sodastream med kolsyrepatron och fyra flaskor" });
+            output.Add(new Product { Id = "1005300", Name = "Day Vattenflaska 500ML", Description = "Vattenflaska 500 ml" });
 
-            output.Add(new Licens { Id = "", Name = "", NumberofLicens =  });
-          
+            output.Add(new License { Id = "5010877355", Name = "Microsoft Windows 10 Pro 64-bit Sve OEM", Description = "Program Microsoft Windows 10 Pro 64-bit Sve OEM", NumberOfLicenses = 1 });
+            output.Add(new License { Id = "5011108149", Name = "Microsoft Windows Server Standard 2019", Description = "Windows Server Standard 2019 16 Cores Engelsk DVD + 5 CAL Box", NumberOfLicenses = 5 });
 
             return output;
-        }
 
+        }
     }
 }

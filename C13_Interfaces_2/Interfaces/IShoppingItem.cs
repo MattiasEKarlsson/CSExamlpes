@@ -10,7 +10,8 @@ namespace C13_Interfaces_2.Interfaces
         string Name { get; set; }
         string Description { get; set; }
 
-        bool Ordercompleted { get; }
-        void ShippingIteam();
+
+        bool OrderCompleted { get; }
+        void ShippingItem();
     }
 }

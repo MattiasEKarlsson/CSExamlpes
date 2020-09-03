@@ -8,26 +8,20 @@ namespace C13_Interfaces_2.Helpers
 {
     class Product : IShoppingItem
     {
-        public string Id  {get; set;}
-        public string Name{ get; set; }
+        public string Id { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
-        public bool Ordercompleted { get; private set; }
 
-        public void ShippingIteam()
+
+        public bool OrderCompleted { get; private set; }
+
+        public void ShippingItem()
         {
-            throw new NotImplementedException();
-        }
-        bool OrderCompleted = true;
-        public void ShippingItem() 
-        {
-            if (!OrderCompleted)
+            if (!OrderCompleted)    // if(OrderCompleted == false)     if(OrderCompeted != true)
             {
-                Console.WriteLine($"Varan {Name} har skickats");
+                Console.WriteLine($"Varan { Name } har skickats iväg.");
                 OrderCompleted = true;
             }
-        
-        
         }
-
     }
 }
