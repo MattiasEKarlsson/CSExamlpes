@@ -21,8 +21,8 @@ namespace C11_Enum
 
         static void Main(string[] args)
         {
-            var temperatur = 14;
-            var _tempLevel = Level.Normal;
+            var temperatur = 31;
+            var _tempLevel = Level.High;
 
             switch (temperatur)
             { 
@@ -58,7 +58,7 @@ namespace C11_Enum
             }
 
 
-            var status = Status.Transporing;
+            var status = Status.Pending;
 
                 switch (status)
 

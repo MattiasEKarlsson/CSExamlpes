@@ -7,18 +7,27 @@ namespace C15_Abstruct_2
     {
         static void Main(string[] args)
         {
-            var temsensor = new TempSensor();
-            temsensor.CreateFromConnectionString("HostName=iot.azure.com;DeviceId=dev1");
+            var tempsensor = new TempSensor();
+
+            Console.WriteLine(tempsensor.CreateFromConnectionString("HostName=iot.azure.com;DeviceId=dev1"));
             Console.WriteLine();
-            var command = temsensor.RecevingMesage();
-            Console.WriteLine($"Recived Command: {command}");
+
+            var command = tempsensor.ReceiveMessage();
+            Console.WriteLine($"Received Command: {command}");
 
             switch (command)
             {
                 case "get":
-                    temsensor.SendMessage("Temp = 12");
-                        break;
-                    
+                    tempsensor.SendMessage("temperature = 12");
+                    break;
+
+                case "reset":
+                    tempsensor.SendMessage("device has been reset.");
+                    break;
+
+                default:
+                    tempsensor.SendMessage("Command not implemented");
+                    break;
             }
         }
     }

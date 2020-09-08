@@ -2,7 +2,7 @@
 
 namespace C13_Interfaces_2.Models
 {
-    public interface ILicens
+    public interface ILicense
     {
         int NumberOfLicenses { get; set; }
     }

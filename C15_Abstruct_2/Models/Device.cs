@@ -4,9 +4,9 @@ using System.Text;
 
 namespace C15_Abstruct_2.Models
 {
-    abstract class Device
+     class Device
     {
-        public string CreateFromConnectionString(string connectionstring) 
+        public virtual string CreateFromConnectionString(string connectionstring) 
         {
             return $"Initializong connection with \"{connectionstring}\"";
         

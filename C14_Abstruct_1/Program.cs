@@ -13,6 +13,8 @@ namespace C14_Abstruct_1
              new Teacher {FName = "Hans", LName ="Mattin", Role ="Teacher"},
              new Student {FName = "Mattias", LName ="Karlsson"},
              new Student {FName = "Emil", LName ="Pettersson"},
+             new Teacher {FName = "Karl", LName ="Gustaf" },
+
 
             };
             foreach (var person in classlist)
@@ -24,9 +26,20 @@ namespace C14_Abstruct_1
                 
                 
             }
+            Console.WriteLine("----------------------------------------");
 
-            
-            
+            foreach (var person in classlist)
+            {
+                if (person is Student student)
+                {
+                    Console.WriteLine($"{student.FName} {student.LName}");
+                }
+
+
+            }
+
+
+
         }
     }
 }

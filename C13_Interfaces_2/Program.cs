@@ -1,4 +1,5 @@
 ﻿using C13_Interfaces_2.Helpers;
+using C13_Interfaces_2.Models;
 using System;
 
 namespace C13_Interfaces_2
@@ -13,8 +14,8 @@ namespace C13_Interfaces_2
             {
                 item.ShippingItem();
 
-                if (item is ILicense license)
-                    Console.WriteLine($"- Du har { license.NumberOfLicenses } st licenser att använda.");
+                if (item is ILicense License)
+                    Console.WriteLine($"- Du har { License.NumberOfLicenses } st licenser att använda.");
             }
         }
     }

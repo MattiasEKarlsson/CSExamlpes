@@ -5,7 +5,7 @@ using System.Text;
 
 namespace C13_Interfaces_2.Models
 {
-    class License : ILicens
+    class License : ILicense
     {
         public string Name { get; set; }
 
